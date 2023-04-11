@@ -26,7 +26,7 @@ gb = GradientBoostingRegressor(learning_rate=params['learning_rate'], n_estimato
 gb.fit(X_train, y_train)
 
 task.upload_artifact('GBR model',gb)
-joblib.dump(gb, 'gb.pkl', compress=True)
+joblib.dump(gb, 'models/gb.pkl', compress=True)
 
 y_pred_gb = gb.predict(X_test)
 
